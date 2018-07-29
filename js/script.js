@@ -36,14 +36,14 @@ function addCart() {
 
             cartField.appendChild(productItem);
             btn.remove();
-
-            // Прячем продукт
-            product[i].hidden = true;
+            product[i].remove();
 
             // При клике на убрать возвращаем hidden = false и удаляем клон
             delBtn.addEventListener('click', function () {
+                let productNew = productItem.cloneNode(true);
+                document.querySelector('.shop').insertBefore();
                 productItem.remove();
-                product[i].hidden = false;
+
             })
 
         });
